@@ -377,6 +377,15 @@
 
       <div class="card">
         <div class="card-header">
+          <a class="card-title" href="https://calebsobo.com/ffh" target="_blank" rel="noopener">calebsobo.com/ffh</a>
+          <button class="info-btn" onclick="openModal('modal-ffh')">i</button>
+        </div>
+        <p class="card-desc">Live portfolio — video direction, graphics, and photography. Staged at a non-obvious path while the main landing page is still coming-soon.</p>
+        <div class="card-tags"><span class="tag">GitHub Pages</span><span class="tag">Cloudflare DNS</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
           <a class="card-title" href="https://karakeep.calebsobo.com" target="_blank" rel="noopener">karakeep.calebsobo.com</a>
           <button class="info-btn" onclick="openModal('modal-karakeep')">i</button>
         </div>
@@ -473,6 +482,24 @@
         <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied (direct to GitHub Pages IPs)</span></li>
         <li class="infra-item"><span class="infra-key">Repo</span><span class="infra-val"><a href="https://github.com/renlic/portfolio-coming-soon" target="_blank" rel="noopener">renlic/portfolio-coming-soon</a></span></li>
         <li class="infra-item"><span class="infra-key">Deploy</span><span class="infra-val">Push to main → GitHub Pages auto-deploys</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-ffh" onclick="closeOnBackdrop(event, 'modal-ffh')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-ffh')">×</button>
+    <p class="modal-title">calebsobo.com/ffh</p>
+    <p class="modal-url">https://calebsobo.com/ffh</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">GitHub Pages — subdirectory of calebsobo.com repo</span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied (direct to GitHub Pages IPs)</span></li>
+        <li class="infra-item"><span class="infra-key">Repo</span><span class="infra-val"><a href="https://github.com/renlic/portfolio-coming-soon" target="_blank" rel="noopener">renlic/portfolio-coming-soon</a> (<code>/ffh</code> subdir)</span></li>
+        <li class="infra-item"><span class="infra-key">Deploy</span><span class="infra-val">Push to main → GitHub Pages auto-deploys</span></li>
+        <li class="infra-item"><span class="infra-key">Note</span><span class="infra-val">Staged at <code>/ffh</code> while main landing page is still coming-soon</span></li>
       </ul>
     </div>
   </div>
