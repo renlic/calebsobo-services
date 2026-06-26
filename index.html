@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111111" />
+    <title>Services — calebsobo.com</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://services.calebsobo.com" />
+    <meta property="og:title" content="Services" />
+    <meta property="og:description" content="Services &amp; sites hosted on calebsobo.com." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    />
+
+    <style>
+      /* ── layout ── */
+      header {
+        border-bottom: unset;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1.3rem;
+        display: flex;
+        position: relative;
+      }
+
+      .navbar-icon img {
+        margin-bottom: 0;
+        height: 60px;
+      }
+
+      nav {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav ul {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        overflow: hidden;
+      }
+
+      nav li { margin: 0; }
+
+      nav li a {
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        background-color: unset;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      nav li a:hover,
+      nav li a:active { color: #fff; background-color: #555; }
+      nav li a:focus  { color: #fff; background-color: #444; }
+
+      .menu-toggle {
+        color: #fff;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        background-color: #555;
+        border: none;
+        padding: 10px;
+        font-size: 15px;
+        display: none;
+      }
+
+      .menu-toggle:active,
+      .menu-toggle:hover { background-color: #555; }
+      .menu-toggle:focus  { background-color: #444; box-shadow: 0 0 0 2px #ffffff80; }
+
+      @media screen and (max-width: 768px) {
+        nav ul { flex-direction: column; align-items: center; display: none; }
+        .menu-toggle { display: block; }
+        nav.active ul { display: flex; }
+        nav li { width: 100%; }
+        nav li a { white-space: normal; }
+      }
+
+      /* ── rainbow borders ── */
+      .rainbow-bottom { position: relative; }
+      .rainbow-bottom::after {
+        content: "";
+        pointer-events: none;
+        z-index: 1;
+        background: linear-gradient(90deg, red, orange, #ff0, green, #00f, indigo, violet, red) 0 0 / 200% 100%;
+        height: 3px;
+        animation: rainbow-slide 8s linear infinite;
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+      }
+
+      .rainbow-top { position: relative; }
+      .rainbow-top::after {
+        content: "";
+        pointer-events: none;
+        z-index: 1;
+        background: linear-gradient(90deg, red, orange, #ff0, green, #00f, indigo, violet, red) 0 0 / 200% 100%;
+        height: 3px;
+        animation: rainbow-slide 8s linear infinite;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+      }
+
+      @keyframes rainbow-slide { to { background-position: 200% 0; } }
+
+      /* ── hr rainbow ── */
+      hr { border-image: linear-gradient(90deg, red, orange, #ff0, green, #00f, indigo, violet) 1; }
+
+      /* ── footer ── */
+      footer {
+        background: #111;
+        margin: 2rem calc(-50vw + 50%) -2rem;
+        padding: 2rem calc(50vw - 50%);
+      }
+      footer > *:first-child { margin-bottom: 0; padding-bottom: 0; }
+      footer > *:last-child  { margin-top: 0; margin-bottom: 0; }
+
+      /* ── status colours ── */
+      .up   { color: #3fb950; }
+      .down { color: #f85149; }
+
+      /* ── service cards ── */
+      blockquote { text-align: center; border-left: none; }
+      blockquote.warning {
+        background: #2b1d00;
+        border-color: orange;
+      }
+
+      /* ── internal section note ── */
+      .tailscale-note {
+        font-size: 0.85em;
+        opacity: 0.75;
+        font-style: italic;
+      }
+
+      /* ── light-mode overrides ── */
+      @media (prefers-color-scheme: light) {
+        pre { background: #f6f8fa; }
+
+        nav li a { color: #000; }
+        .menu-toggle { color: #000; background-color: #e1e1e1; }
+        .navbar-icon img { filter: none; }
+
+        footer { background-color: #f6f8fa; }
+
+        blockquote.warning { background: #ffc144; border-color: #ff8c00; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="rainbow-bottom">
+      <div class="navbar-icon">
+        <span style="font-size:1.6rem;font-weight:700;letter-spacing:-0.03em;">calebsobo.com</span>
+      </div>
+      <button
+        class="menu-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        onclick="this.setAttribute('aria-expanded', document.getElementById('site-nav').classList.toggle('active')); "
+      >☰</button>
+      <nav id="site-nav">
+        <ul>
+          <li><a href="https://calebsobo.com">Home</a></li>
+          <li><a href="https://portfolio.calebsobo.com">Portfolio</a></li>
+          <li><a href="https://services.calebsobo.com">Services</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Services</h2>
+      <p>A collection of self-hosted services and sites running on calebsobo.com. Internal services are only reachable over <a href="https://tailscale.com" target="_blank" rel="noopener">Tailscale</a>.</p>
+
+      <hr />
+
+      <!-- ── Public Services ── -->
+      <h3>Public</h3>
+      <p>These services are accessible from anywhere on the internet.</p>
+
+      <blockquote>
+        <h4><a href="https://calebsobo.com" target="_blank" rel="noopener">calebsobo.com</a></h4>
+        <p>Personal website and landing page.</p>
+        <p><small>GitHub Pages</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://portfolio.calebsobo.com" target="_blank" rel="noopener">portfolio.calebsobo.com</a></h4>
+        <p>Portfolio showcasing projects and work.</p>
+        <p><small>GitHub Pages</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://karakeep.calebsobo.com" target="_blank" rel="noopener">karakeep.calebsobo.com</a></h4>
+        <p>Karakeep — self-hosted bookmark and read-later manager.</p>
+        <p><small>Docker · Cloudflare proxy</small></p>
+      </blockquote>
+
+      <hr />
+
+      <!-- ── Internal Services (Tailscale) ── -->
+      <h3>Internal <span class="tailscale-note">(Tailscale only)</span></h3>
+      <p>These services run on private infrastructure and are only accessible over the Tailscale VPN.</p>
+
+      <blockquote>
+        <h4><a href="https://immich.internal.calebsobo.com" target="_blank" rel="noopener">immich.internal.calebsobo.com</a></h4>
+        <p>Immich — self-hosted photo and video backup.</p>
+        <p><small>Docker</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://netdata.internal.calebsobo.com" target="_blank" rel="noopener">netdata.internal.calebsobo.com</a></h4>
+        <p>Netdata — real-time system and infrastructure monitoring.</p>
+        <p><small>Docker</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://mcsmanager.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager.internal.calebsobo.com</a></h4>
+        <p>MCSManager — web-based Minecraft server management panel.</p>
+        <p><small>Docker</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://mcsmanager-daemon.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager-daemon.internal.calebsobo.com</a></h4>
+        <p>MCSManager Daemon — background agent for MCSManager.</p>
+        <p><small>Docker</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://mc-dashboard.internal.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.internal.calebsobo.com</a></h4>
+        <p>Minecraft server dashboard and status overview.</p>
+        <p><small>Docker</small></p>
+      </blockquote>
+
+      <blockquote>
+        <h4><a href="https://videostitch.internal.calebsobo.com" target="_blank" rel="noopener">videostitch.internal.calebsobo.com</a></h4>
+        <p>VideoStitch — internal video processing and stitching tool.</p>
+        <p><small>Docker</small></p>
+      </blockquote>
+    </main>
+
+    <footer class="rainbow-top">
+      <p>© calebsobo.com</p>
+    </footer>
+
+    <script>
+      // mobile nav toggle syncs aria-expanded
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.getElementById('site-nav');
+      toggle.addEventListener('click', () => {
+        const expanded = nav.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', expanded);
+      });
+    </script>
+  </body>
+</html>
