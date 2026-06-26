@@ -528,6 +528,30 @@
         <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span><span class="tag">Custom</span></div>
       </div>
 
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/simple-icons:minecraft.svg" alt="">
+            <a class="card-title" href="https://forever-1.mc.internal.calebsobo.com" target="_blank" rel="noopener">forever-1.mc.internal</a>
+          </div>
+          <button class="info-btn" onclick="openModal('modal-forever-1')">i</button>
+        </div>
+        <p class="card-desc">Survival Minecraft server (easy difficulty). Connect via Minecraft Java Edition on Tailscale at port 25565.</p>
+        <div class="card-tags"><span class="tag">Minecraft</span><span class="tag">Paper</span><span class="tag">Tailscale</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/simple-icons:minecraft.svg" alt="">
+            <a class="card-title" href="https://island.mc.internal.calebsobo.com" target="_blank" rel="noopener">island.mc.internal</a>
+          </div>
+          <button class="info-btn" onclick="openModal('modal-island')">i</button>
+        </div>
+        <p class="card-desc">Survival Minecraft server (normal difficulty). Connect via Minecraft Java Edition on Tailscale at port 25567.</p>
+        <div class="card-tags"><span class="tag">Minecraft</span><span class="tag">Paper</span><span class="tag">Tailscale</span></div>
+      </div>
+
     </div>
   </div>
 </main>
@@ -759,6 +783,48 @@
         <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only</span></li>
         <li class="infra-item"><span class="infra-key">Storage</span><span class="infra-val"><code>./tmp</code> → <code>/tmp/videostitch</code></span></li>
         <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/videostitch/docker-compose.yml</code></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-forever-1" onclick="closeOnBackdrop(event, 'modal-forever-1')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-forever-1')">×</button>
+    <p class="modal-title">forever-1.mc.internal.calebsobo.com</p>
+    <p class="modal-url">forever-1.mc.internal.calebsobo.com:25565</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">VPS (clef) — via mcsm-daemon (Docker)</span></li>
+        <li class="infra-item"><span class="infra-key">Server</span><span class="infra-val">Paper 1.21.11 (Java Edition)</span></li>
+        <li class="infra-item"><span class="infra-key">Port</span><span class="infra-val"><code>:25565</code> (standard Minecraft port)</span></li>
+        <li class="infra-item"><span class="infra-key">Gamemode</span><span class="infra-val">Survival — easy difficulty</span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied, resolves to Tailscale IP</span></li>
+        <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only — connect in Minecraft client</span></li>
+        <li class="infra-item"><span class="infra-key">Managed</span><span class="infra-val">MCSManager (<a href="https://mcsmanager.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager.internal</a>)</span></li>
+        <li class="infra-item"><span class="infra-key">Data</span><span class="infra-val"><code>~/mcsmanager/daemon/data/InstanceData/1265308c.../</code></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-island" onclick="closeOnBackdrop(event, 'modal-island')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-island')">×</button>
+    <p class="modal-title">island.mc.internal.calebsobo.com</p>
+    <p class="modal-url">island.mc.internal.calebsobo.com:25567</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">VPS (clef) — via mcsm-daemon (Docker)</span></li>
+        <li class="infra-item"><span class="infra-key">Server</span><span class="infra-val">Paper 1.21.11 (Java Edition)</span></li>
+        <li class="infra-item"><span class="infra-key">Port</span><span class="infra-val"><code>:25567</code></span></li>
+        <li class="infra-item"><span class="infra-key">Gamemode</span><span class="infra-val">Survival — normal difficulty</span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied, wildcard <code>*.mc.internal</code> → Tailscale IP; SRV record on port 25567</span></li>
+        <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only — connect in Minecraft client</span></li>
+        <li class="infra-item"><span class="infra-key">Managed</span><span class="infra-val">MCSManager (<a href="https://mcsmanager.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager.internal</a>)</span></li>
+        <li class="infra-item"><span class="infra-key">Data</span><span class="infra-val"><code>~/mcsmanager/daemon/data/InstanceData/0fff5661.../</code></span></li>
       </ul>
     </div>
   </div>

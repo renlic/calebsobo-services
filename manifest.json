@@ -11,10 +11,14 @@
     "mcsmanager.internal.calebsobo.com",
     "mcsmanager-daemon.internal.calebsobo.com",
     "mc-dashboard.internal.calebsobo.com",
-    "videostitch.internal.calebsobo.com"
+    "videostitch.internal.calebsobo.com",
+    "forever-1.mc.internal.calebsobo.com",
+    "island.mc.internal.calebsobo.com"
   ],
   "ignored_dns_names": [
     "calebsobo.com",
-    "www.calebsobo.com"
+    "www.calebsobo.com",
+    "*.mc.internal.calebsobo.com",
+    "_minecraft._tcp.island.mc.internal.calebsobo.com"
   ]
 }
