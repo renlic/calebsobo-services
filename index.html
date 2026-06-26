@@ -91,6 +91,18 @@
     nav a:hover { color: var(--text); background: var(--tag-bg); }
     nav a.active { color: var(--text); }
 
+    .signout-btn {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      margin-left: 0.5rem;
+    }
+    .signout-btn:hover { color: var(--text); border-color: var(--subtle); background: var(--tag-bg); }
+
     /* ── main ── */
     main {
       max-width: 900px;
@@ -340,6 +352,7 @@
     <a href="https://calebsobo.com">Home</a>
     <a href="https://portfolio.calebsobo.com">Portfolio</a>
     <a href="https://services.calebsobo.com" class="active">Services</a>
+    <a href="/cdn-cgi/access/logout" class="signout-btn">Sign out</a>
   </nav>
 </header>
 
@@ -448,19 +461,19 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://videostitch.internal.calebsobo.com" target="_blank" rel="noopener">videostitch.internal</a>
-          <button class="info-btn" onclick="openModal('modal-videostitch')">i</button>
+          <a class="card-title" href="https://mc-dashboard.internal.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.internal</a>
+          <button class="info-btn" onclick="openModal('modal-mc-dashboard')">i</button>
         </div>
-        <p class="card-desc">Custom web tool for uploading and concatenating video clips server-side using ffmpeg.</p>
+        <p class="card-desc">Custom Minecraft server dashboard — view online players, start/stop instances, run RCON commands, manage backups, and auto-stop idle servers.</p>
         <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span><span class="tag">Custom</span></div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://mc-dashboard.internal.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.internal</a>
-          <button class="info-btn" onclick="openModal('modal-mc-dashboard')">i</button>
+          <a class="card-title" href="https://videostitch.internal.calebsobo.com" target="_blank" rel="noopener">videostitch.internal</a>
+          <button class="info-btn" onclick="openModal('modal-videostitch')">i</button>
         </div>
-        <p class="card-desc">Custom Minecraft server dashboard — view online players, start/stop instances, run RCON commands, manage backups, and auto-stop idle servers.</p>
+        <p class="card-desc">Custom web tool for uploading and concatenating video clips server-side using ffmpeg.</p>
         <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span><span class="tag">Custom</span></div>
       </div>
 
