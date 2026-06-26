@@ -177,6 +177,24 @@
       gap: 0.5rem;
     }
 
+    .card-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 0;
+    }
+
+    .card-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      filter: brightness(0) opacity(0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .card-icon { filter: brightness(0) invert(1) opacity(0.45); }
+    }
+
     .card-title {
       font-size: 0.875rem;
       font-weight: 500;
@@ -372,7 +390,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://calebsobo.com" target="_blank" rel="noopener">calebsobo.com</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:user.svg" alt="">
+            <a class="card-title" href="https://calebsobo.com" target="_blank" rel="noopener">calebsobo.com</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-main')">i</button>
         </div>
         <p class="card-desc">Portfolio coming-soon page. Designer, photographer, and art director based in Marquette, MI.</p>
@@ -381,7 +402,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://portfolio.calebsobo.com" target="_blank" rel="noopener">portfolio.calebsobo.com</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:folder-open.svg" alt="">
+            <a class="card-title" href="https://portfolio.calebsobo.com" target="_blank" rel="noopener">portfolio.calebsobo.com</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-portfolio')">i</button>
         </div>
         <p class="card-desc">File directory of portfolio assets — slideshows, print work, photography, class projects, and résumés.</p>
@@ -390,7 +414,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://calebsobo.com/ffh" target="_blank" rel="noopener">calebsobo.com/ffh</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:briefcase.svg" alt="">
+            <a class="card-title" href="https://calebsobo.com/ffh" target="_blank" rel="noopener">calebsobo.com/ffh</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-ffh')">i</button>
         </div>
         <p class="card-desc">Live portfolio — video direction, graphics, and photography. Staged at a non-obvious path while the main landing page is still coming-soon.</p>
@@ -399,7 +426,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://karakeep.calebsobo.com" target="_blank" rel="noopener">karakeep.calebsobo.com</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/simple-icons:karakeep.svg" alt="">
+            <a class="card-title" href="https://karakeep.calebsobo.com" target="_blank" rel="noopener">karakeep.calebsobo.com</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-karakeep')">i</button>
         </div>
         <p class="card-desc">Read-it-later and bookmark manager with full-text search and AI tagging.</p>
@@ -408,7 +438,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://services.calebsobo.com" target="_blank" rel="noopener">services.calebsobo.com</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:layout-grid.svg" alt="">
+            <a class="card-title" href="https://services.calebsobo.com" target="_blank" rel="noopener">services.calebsobo.com</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-services')">i</button>
         </div>
         <p class="card-desc">This page. Services directory for calebsobo.com infrastructure.</p>
@@ -425,7 +458,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://immich.internal.calebsobo.com" target="_blank" rel="noopener">immich.internal</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/simple-icons:immich.svg" alt="">
+            <a class="card-title" href="https://immich.internal.calebsobo.com" target="_blank" rel="noopener">immich.internal</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-immich')">i</button>
         </div>
         <p class="card-desc">Self-hosted Google Photos replacement. Backs up and organises photos and videos with facial recognition and smart albums.</p>
@@ -434,7 +470,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://netdata.internal.calebsobo.com" target="_blank" rel="noopener">netdata.internal</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/simple-icons:netdata.svg" alt="">
+            <a class="card-title" href="https://netdata.internal.calebsobo.com" target="_blank" rel="noopener">netdata.internal</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-netdata')">i</button>
         </div>
         <p class="card-desc">Real-time system monitoring. Tracks CPU, RAM, disk, network, and running Docker containers on the host.</p>
@@ -443,7 +482,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://mcsmanager.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager.internal</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/simple-icons:minecraft.svg" alt="">
+            <a class="card-title" href="https://mcsmanager.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager.internal</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-mcsmanager')">i</button>
         </div>
         <p class="card-desc">Web panel for managing Minecraft server instances — start, stop, configure, view logs, and manage files.</p>
@@ -452,7 +494,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://mcsmanager-daemon.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager-daemon.internal</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:terminal.svg" alt="">
+            <a class="card-title" href="https://mcsmanager-daemon.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager-daemon.internal</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-mcsm-daemon')">i</button>
         </div>
         <p class="card-desc">Background daemon that actually runs Minecraft server processes. Controlled by MCSManager web panel.</p>
@@ -461,7 +506,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://mc-dashboard.internal.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.internal</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:gauge.svg" alt="">
+            <a class="card-title" href="https://mc-dashboard.internal.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.internal</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-mc-dashboard')">i</button>
         </div>
         <p class="card-desc">Custom Minecraft server dashboard — view online players, start/stop instances, run RCON commands, manage backups, and auto-stop idle servers.</p>
@@ -470,7 +518,10 @@
 
       <div class="card">
         <div class="card-header">
-          <a class="card-title" href="https://videostitch.internal.calebsobo.com" target="_blank" rel="noopener">videostitch.internal</a>
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:film.svg" alt="">
+            <a class="card-title" href="https://videostitch.internal.calebsobo.com" target="_blank" rel="noopener">videostitch.internal</a>
+          </div>
           <button class="info-btn" onclick="openModal('modal-videostitch')">i</button>
         </div>
         <p class="card-desc">Custom web tool for uploading and concatenating video clips server-side using ffmpeg.</p>
