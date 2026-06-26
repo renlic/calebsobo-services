@@ -362,7 +362,7 @@
           <a class="card-title" href="https://calebsobo.com" target="_blank" rel="noopener">calebsobo.com</a>
           <button class="info-btn" onclick="openModal('modal-main')">i</button>
         </div>
-        <p class="card-desc">Personal landing page with contact info and links.</p>
+        <p class="card-desc">Portfolio coming-soon page. Designer, photographer, and art director based in Marquette, MI.</p>
         <div class="card-tags"><span class="tag">GitHub Pages</span><span class="tag">Cloudflare DNS</span></div>
       </div>
 
@@ -371,7 +371,7 @@
           <a class="card-title" href="https://portfolio.calebsobo.com" target="_blank" rel="noopener">portfolio.calebsobo.com</a>
           <button class="info-btn" onclick="openModal('modal-portfolio')">i</button>
         </div>
-        <p class="card-desc">Portfolio coming-soon page. Full portfolio in progress.</p>
+        <p class="card-desc">File directory of portfolio assets — slideshows, print work, photography, class projects, and résumés.</p>
         <div class="card-tags"><span class="tag">GitHub Pages</span><span class="tag">Cloudflare DNS</span></div>
       </div>
 
@@ -446,6 +446,15 @@
         <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span><span class="tag">Custom</span></div>
       </div>
 
+      <div class="card">
+        <div class="card-header">
+          <a class="card-title" href="https://mc-dashboard.internal.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.internal</a>
+          <button class="info-btn" onclick="openModal('modal-mc-dashboard')">i</button>
+        </div>
+        <p class="card-desc">Custom Minecraft server dashboard — view online players, start/stop instances, run RCON commands, manage backups, and auto-stop idle servers.</p>
+        <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span><span class="tag">Custom</span></div>
+      </div>
+
     </div>
   </div>
 </main>
@@ -481,6 +490,7 @@
         <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied (direct to GitHub Pages IPs)</span></li>
         <li class="infra-item"><span class="infra-key">Repo</span><span class="infra-val"><a href="https://github.com/renlic/portfolio-directory" target="_blank" rel="noopener">renlic/portfolio-directory</a></span></li>
         <li class="infra-item"><span class="infra-key">Deploy</span><span class="infra-val">Push to main → GitHub Pages auto-deploys</span></li>
+        <li class="infra-item"><span class="infra-key">Contents</span><span class="infra-val">Slideshows, print work, photography, class projects, résumés, and archived assets</span></li>
       </ul>
     </div>
   </div>
@@ -612,6 +622,30 @@
         <li class="infra-item"><span class="infra-key">Note</span><span class="infra-val">Mounts <code>/var/run/docker.sock</code> to spawn server containers</span></li>
         <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/mcsmanager/docker-compose.yml</code></span></li>
         <li class="infra-item"><span class="infra-key">Repo</span><span class="infra-val"><a href="https://github.com/MCSManager/MCSManager" target="_blank" rel="noopener">MCSManager/MCSManager</a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-mc-dashboard" onclick="closeOnBackdrop(event, 'modal-mc-dashboard')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-mc-dashboard')">×</button>
+    <p class="modal-title">mc-dashboard.internal.calebsobo.com</p>
+    <p class="modal-url">https://mc-dashboard.internal.calebsobo.com</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">VPS (clef) — Docker</span></li>
+        <li class="infra-item"><span class="infra-key">Image</span><span class="infra-val"><code>node:lts-alpine</code> (custom app)</span></li>
+        <li class="infra-item"><span class="infra-key">Port</span><span class="infra-val"><code>:3000</code></span></li>
+        <li class="infra-item"><span class="infra-key">Proxy</span><span class="infra-val">Caddy → <code>mc-dashboard:3000</code></span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied, resolves to Tailscale IP</span></li>
+        <li class="infra-item"><span class="infra-key">TLS</span><span class="infra-val">Caddy with Cloudflare DNS challenge</span></li>
+        <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only</span></li>
+        <li class="infra-item"><span class="infra-key">Backend</span><span class="infra-val">Talks to MCSManager at <code>host.docker.internal:23333</code></span></li>
+        <li class="infra-item"><span class="infra-key">Storage</span><span class="infra-val"><code>/home/caleb/mcsmanager/daemon/data/InstanceData</code> (read-only)</span></li>
+        <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/mc-dashboard/docker-compose.yml</code></span></li>
+        <li class="infra-item"><span class="infra-key">Note</span><span class="infra-val">Migrated from coda (100.78.244.61) to clef</span></li>
       </ul>
     </div>
   </div>
