@@ -1,0 +1,20 @@
+{
+  "comment": "Known services already on the services page. Add new entries here after adding them to the page, or let the agent do it.",
+  "known_dns_names": [
+    "calebsobo.com",
+    "www.calebsobo.com",
+    "portfolio.calebsobo.com",
+    "karakeep.calebsobo.com",
+    "services.calebsobo.com",
+    "immich.internal.calebsobo.com",
+    "netdata.internal.calebsobo.com",
+    "mcsmanager.internal.calebsobo.com",
+    "mcsmanager-daemon.internal.calebsobo.com",
+    "mc-dashboard.internal.calebsobo.com",
+    "videostitch.internal.calebsobo.com"
+  ],
+  "ignored_dns_names": [
+    "calebsobo.com",
+    "www.calebsobo.com"
+  ]
+}
