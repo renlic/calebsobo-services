@@ -499,6 +499,18 @@
         <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span><span class="tag">Custom</span></div>
       </div>
 
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:bell.svg" alt="">
+            <a class="card-title" href="https://ntfy.internal.calebsobo.com" target="_blank" rel="noopener">ntfy.internal</a>
+          </div>
+          <button class="info-btn" onclick="openModal('modal-ntfy')">i</button>
+        </div>
+        <p class="card-desc">Sends push notifications to phones and desktops via HTTP. Subscribe to topics and get alerts from scripts, services, and apps — no account needed.</p>
+        <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Tailscale</span></div>
+      </div>
+
     </div>
   </div>
 
@@ -861,6 +873,27 @@
         <li class="infra-item"><span class="infra-key">TLS</span><span class="infra-val">Cloudflare Tunnel</span></li>
         <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Public</span></li>
         <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/transpose/server.js</code></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-ntfy" onclick="closeOnBackdrop(event, 'modal-ntfy')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-ntfy')">×</button>
+    <p class="modal-title">ntfy.internal.calebsobo.com</p>
+    <p class="modal-url">https://ntfy.internal.calebsobo.com</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">VPS (clef) — Docker</span></li>
+        <li class="infra-item"><span class="infra-key">Image</span><span class="infra-val"><code>binwiederhier/ntfy</code></span></li>
+        <li class="infra-item"><span class="infra-key">Port</span><span class="infra-val"><code>:80</code></span></li>
+        <li class="infra-item"><span class="infra-key">Proxy</span><span class="infra-val">Caddy → <code>ntfy:80</code></span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — unproxied, resolves to Tailscale IP</span></li>
+        <li class="infra-item"><span class="infra-key">TLS</span><span class="infra-val">Caddy with Cloudflare DNS challenge</span></li>
+        <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only</span></li>
+        <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/ntfy/docker-compose.yml</code></span></li>
       </ul>
     </div>
   </div>
