@@ -448,6 +448,18 @@
         <div class="card-tags"><span class="tag">Cloudflare Pages</span><span class="tag">Cloudflare Access</span></div>
       </div>
 
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:wand-2.svg" alt="">
+            <a class="card-title" href="https://transpose.calebsobo.com" target="_blank" rel="noopener">transpose.calebsobo.com</a>
+          </div>
+          <button class="info-btn" onclick="openModal('modal-transpose')">i</button>
+        </div>
+        <p class="card-desc">Generates ready-to-run ffmpeg and yt-dlp commands from plain-English descriptions using Claude AI.</p>
+        <div class="card-tags"><span class="tag">Node.js</span><span class="tag">Caddy</span><span class="tag">Cloudflare Tunnel</span><span class="tag">Custom</span></div>
+      </div>
+
     </div>
   </div>
 
@@ -833,6 +845,27 @@
         <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only — connect in Minecraft client</span></li>
         <li class="infra-item"><span class="infra-key">Managed</span><span class="infra-val">MCSManager (<a href="https://mcsmanager.internal.calebsobo.com" target="_blank" rel="noopener">mcsmanager.internal</a>)</span></li>
         <li class="infra-item"><span class="infra-key">Data</span><span class="infra-val"><code>~/mcsmanager/daemon/data/InstanceData/0fff5661.../</code></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-transpose" onclick="closeOnBackdrop(event, 'modal-transpose')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-transpose')">×</button>
+    <p class="modal-title">transpose.calebsobo.com</p>
+    <p class="modal-url">https://transpose.calebsobo.com</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">VPS (clef) — Node.js host process</span></li>
+        <li class="infra-item"><span class="infra-key">Stack</span><span class="infra-val">Node.js (Express) + Anthropic SDK (<code>claude-haiku-4-5</code>)</span></li>
+        <li class="infra-item"><span class="infra-key">Port</span><span class="infra-val"><code>:3002</code></span></li>
+        <li class="infra-item"><span class="infra-key">Proxy</span><span class="infra-val">Caddy → <code>host.docker.internal:3002</code></span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — proxied via Cloudflare Tunnel</span></li>
+        <li class="infra-item"><span class="infra-key">TLS</span><span class="infra-val">Cloudflare Tunnel</span></li>
+        <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Public</span></li>
+        <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/transpose/server.js</code></span></li>
       </ul>
     </div>
   </div>

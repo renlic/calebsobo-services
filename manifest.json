@@ -13,7 +13,8 @@
     "mc-dashboard.internal.calebsobo.com",
     "videostitch.internal.calebsobo.com",
     "forever-1.mc.internal.calebsobo.com",
-    "island.mc.internal.calebsobo.com"
+    "island.mc.internal.calebsobo.com",
+    "transpose.calebsobo.com"
   ],
   "ignored_dns_names": [
     "calebsobo.com",
