@@ -15,7 +15,8 @@
     "forever-1.mc.internal.calebsobo.com",
     "island.mc.internal.calebsobo.com",
     "transpose.calebsobo.com",
-    "ntfy.internal.calebsobo.com"
+    "ntfy.internal.calebsobo.com",
+    "mc-dashboard.calebsobo.com"
   ],
   "ignored_dns_names": [
     "calebsobo.com",

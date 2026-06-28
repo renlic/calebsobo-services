@@ -558,6 +558,18 @@
       <div class="card">
         <div class="card-header">
           <div class="card-title-row">
+            <img class="card-icon" src="https://api.iconify.design/lucide:gauge.svg" alt="">
+            <a class="card-title" href="https://mc-dashboard.calebsobo.com" target="_blank" rel="noopener">mc-dashboard.calebsobo.com</a>
+          </div>
+          <button class="info-btn" onclick="openModal('modal-mc-dashboard-public')">i</button>
+        </div>
+        <p class="card-desc">Password-protected public mirror of the MC dashboard — start/stop servers and manage backups from anywhere without Tailscale.</p>
+        <div class="card-tags"><span class="tag">Docker</span><span class="tag">Caddy</span><span class="tag">Cloudflare Tunnel</span><span class="tag">Custom</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-row">
             <img class="card-icon" src="https://api.iconify.design/simple-icons:minecraft.svg" alt="">
             <a class="card-title" href="https://forever-1.mc.internal.calebsobo.com" target="_blank" rel="noopener">forever-1.mc.internal</a>
           </div>
@@ -894,6 +906,27 @@
         <li class="infra-item"><span class="infra-key">TLS</span><span class="infra-val">Caddy with Cloudflare DNS challenge</span></li>
         <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Tailscale VPN only</span></li>
         <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/ntfy/docker-compose.yml</code></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-mc-dashboard-public" onclick="closeOnBackdrop(event, 'modal-mc-dashboard-public')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-mc-dashboard-public')">×</button>
+    <p class="modal-title">mc-dashboard.calebsobo.com</p>
+    <p class="modal-url">https://mc-dashboard.calebsobo.com</p>
+    <div class="modal-section">
+      <p class="modal-section-label">Hosting</p>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-key">Host</span><span class="infra-val">VPS (clef) — Docker</span></li>
+        <li class="infra-item"><span class="infra-key">Image</span><span class="infra-val"><code>node:lts-alpine</code> (custom app)</span></li>
+        <li class="infra-item"><span class="infra-key">Port</span><span class="infra-val"><code>:3000</code></span></li>
+        <li class="infra-item"><span class="infra-key">Proxy</span><span class="infra-val">Caddy → <code>mc-dashboard:3000</code></span></li>
+        <li class="infra-item"><span class="infra-key">DNS</span><span class="infra-val">Cloudflare — proxied via Cloudflare Tunnel</span></li>
+        <li class="infra-item"><span class="infra-key">TLS</span><span class="infra-val">Cloudflare Tunnel</span></li>
+        <li class="infra-item"><span class="infra-key">Access</span><span class="infra-val">Public — password-protected</span></li>
+        <li class="infra-item"><span class="infra-key">Config</span><span class="infra-val"><code>~/docker/mc-dashboard/docker-compose.yml</code></span></li>
       </ul>
     </div>
   </div>
