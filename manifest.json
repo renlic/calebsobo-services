@@ -21,6 +21,7 @@
     "calebsobo.com",
     "www.calebsobo.com",
     "*.mc.internal.calebsobo.com",
-    "_minecraft._tcp.island.mc.internal.calebsobo.com"
+    "_minecraft._tcp.island.mc.internal.calebsobo.com",
+    "cf2024-1._domainkey.calebsobo.com"
   ]
 }
